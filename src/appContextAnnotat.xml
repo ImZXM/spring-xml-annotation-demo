@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"  
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+    xmlns:context="http://www.springframework.org/schema/context"  
+    xsi:schemaLocation=" http://www.springframework.org/schema/beans  
+       http://www.springframework.org/schema/beans/spring-beans-3.0.xsd  
+       http://www.springframework.org/schema/context  
+       http://www.springframework.org/schema/context/spring-context-3.0.xsd">  
+       
+       <!-- 开启注解支持 -->
+	 	<context:annotation-config/>
+	 	
+	<!-- student bean -->
+  	<bean id="student" class="com.spring.annotation.Student">
+	</bean>
+	
+	<!-- <qualifier  type="org.springframework.beans.factory.annotation.Qualifier"  value="限定标识符"/>   -->
+	
+	<!-- daoImpl bean -->
+	<bean id="dao" class="com.spring.annotation.DaoImpl">
+		<!-- 下面一句注释掉，使用注解时，不需要这句 -->
+		<!-- <property name="student" ref="student"/> -->
+	</bean>
+	
+	<!-- ServiceImpl bean -->
+	<bean id="service" class="com.spring.annotation.ServiceImpl">
+	</bean>
+
+</beans>

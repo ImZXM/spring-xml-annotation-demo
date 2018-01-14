@@ -7,7 +7,7 @@
 	
 	<!-- student bean -->
 	<bean id="student" class="com.springxml.Student">
-		<property name="id" value="123456"/>
+	 	<property name="id" value="123456"/>
 		<property name="name" value="zhangsan"/>
 	</bean>
 	
